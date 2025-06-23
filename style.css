@@ -1,0 +1,388 @@
+/*Allmänt*/
+body {
+  background: url(1219598.jpg) center/cover no-repeat fixed;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+main {
+  margin-top: 120px; 
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+/* Generellt styles*/
+section, 
+.index-page .main-page,
+.index-page .about-expeditions,
+.index-page .vision-future,
+.contact-section {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+  text-align: left;
+  backdrop-filter: blur(2px);
+  animation: fadeInSection 0.6s ease-out both;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  color: #13f5fd;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 10px 0;
+  color: #e0e0e0;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 1rem 2rem;
+  z-index: 1000;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+header:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.7);
+}
+
+/* Navbar struktur */
+.menu {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Vänstra sida - LOGO */
+.left-side {
+  flex-shrink: 0;
+}
+
+.left-side .logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* MENYLÄNKAR */
+.nav-links {
+  display: flex;
+  justify-content: center; 
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* Höger sida - IKONER */
+.right-side {
+  display: flex;
+  gap: 25px;
+  flex-shrink: 0;
+}
+
+.right-side .icon-link {
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links a:hover,
+.left-side .logo:hover,
+.right-side .icon-link:hover {
+  color: #000;
+  background-color: #13f5fd;
+}
+
+
+/* Teknology listan */
+.technology-page .key-technologies ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.technology-page .key-technologies li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.technology-page .key-technologies li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  color: #13f5fd;
+  font-size: 1.4rem;
+}
+
+.technology-page .key-technologies li:hover {
+  background-color: rgba(19, 245, 253, 0.1);
+  transform: translateX(5px);
+}
+
+/* Knappar */
+.cta-button, .submit-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #13f5fd;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-button:hover, .submit-btn:hover {
+  background-color: #0dc1c6;
+  color: #fff;
+}
+
+/* Kontakt listan */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #13f5fd;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+.contact-form ::placeholder {
+  color: #e0e0e0;
+}
+
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.contact-page main {
+  flex: 1;
+}
+
+/* Footer för alla */
+footer {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 1rem;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 1rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  font-size: 1.3rem;
+}
+
+.footer-section p,
+.footer-bottom {
+  color: #e0e0e0;
+}
+
+.footer-section.links ul,
+.footer-section.links li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-section.links a,
+.footer-section.social a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer-section.links a:hover,
+.footer-section.social a:hover {
+  color: #13f5fd;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+/* (1024px) */
+@media (max-width: 1024px) {
+  header {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* (768px) */
+@media (max-width: 1024px) {
+  /* Justera mellanrum på mindre skärmar */
+  header {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Minska padding på header */
+  header {
+    padding: 0.8rem 1rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  /* Menylänkar på små skärmar */
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .nav-links a {
+    padding: 8px 0;
+    font-size: 15px;
+    width: 100%;
+    text-align: left;
+  }
+
+  /* Döljer ikoner på små skärmar */
+  .right-side {
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  /* Minska huvudrubrikens mellanrum på små skärmar */
+  main {
+    margin-top: 80px;
+  }
+}
+
+/* (480px) */
+@media (max-width: 480px) {
+  header {
+    padding: 0.5rem;
+  }
+
+  .nav-links a {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .cta-button, .submit-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+  }
+}
+
